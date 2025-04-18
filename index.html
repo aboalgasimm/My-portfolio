@@ -12,13 +12,13 @@
         }
     </style>
 </head>
-<body x-data="{ darkMode: true, resumeModal: false }" :class="darkMode ? 'bg-gray-900 text-gray-900' : 'bg-gray-100 text-gray-900'">
-    <header class="bg-gray-800 text-white py-4" :class="darkMode ? 'bg-gray-900' : 'bg-gray-800'">
+<body x-data="{ darkMode: true, menuOpen: false, resumeModal: false }" :class="darkMode ? 'bg-gray-900 text-gray-900' : 'bg-gray-100 text-gray-900'">
+    <header class="bg-gray-800 text-white py-4 shadow-lg fixed top-0 left-0 w-full z-50" :class="darkMode ? 'bg-gray-900' : 'bg-gray-800'">
         <div class="container mx-auto flex justify-between items-center px-4">
             <!-- Logo -->
             <h1 class="text-2xl font-bold">Abuelgasim</h1>
     
-            <!-- Navigation Links -->
+            <!-- Navigation Links (Desktop) -->
             <nav class="hidden md:flex space-x-6">
                 <a href="#landing" class="hover:text-yellow-400 transition duration-300">Home</a>
                 <a href="#projects" class="hover:text-yellow-400 transition duration-300">Projects</a>
@@ -43,7 +43,13 @@
         </div>
     
         <!-- Mobile Menu -->
-        <div x-show="menuOpen" class="md:hidden bg-gray-700 text-white">
+        <div x-show="menuOpen" x-transition:enter="transition ease-out duration-300 transform"
+             x-transition:enter-start="opacity-0 -translate-y-4"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             x-transition:leave="transition ease-in duration-200 transform"
+             x-transition:leave-start="opacity-100 translate-y-0"
+             x-transition:leave-end="opacity-0 -translate-y-4"
+             class="md:hidden bg-gray-700 text-white absolute inset-x-0 top-full shadow-lg">
             <nav class="flex flex-col space-y-2 p-4">
                 <a href="#landing" class="hover:text-yellow-400 transition duration-300">Home</a>
                 <a href="#projects" class="hover:text-yellow-400 transition duration-300">Projects</a>
@@ -52,7 +58,7 @@
             </nav>
         </div>
     </header>
-<!-- Landing Page -->
+    <!-- Landing Page -->
 <section id="landing" class="relative bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-20">
     <div class="container mx-auto text-center">
         <!-- Background Decorative Elements -->
