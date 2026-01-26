@@ -1,26 +1,100 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Site moved</title>
-    <meta name="description" content="This site has moved. Visit the new website.">
+    <title>انتقل الموقع</title>
     <style>
-      html,body{height:100%;margin:0}
-      body{display:flex;align-items:center;justify-content:center;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:#d1dbe1;color:#0f172a}
-      .wrap{padding:28px;text-align:center}
-      h1{margin:0 0 8px;font-size:26px;color:#0f172a}
-      p{margin:0 0 16px;color:#475569}
-      a.btn{display:inline-block;padding:12px 20px;border-radius:999px;background:#0f172a;color:#fff;text-decoration:none;font-weight:700}
-      .note{margin-top:12px;color:#64748b;font-size:13px}
+      :root {
+        --glass: rgba(255, 255, 255, 0.15);
+        --blur: blur(15px);
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        overflow: hidden;
+      }
+
+      /* Animated liquid background */
+      body::before {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: #38bdf8;
+        filter: blur(80px);
+        border-radius: 50%;
+        z-index: -1;
+        animation: float 10s infinite alternate;
+      }
+
+      @keyframes float {
+        from { transform: translate(-50%, -50%); }
+        to { transform: translate(50%, 50%); }
+      }
+
+      .card {
+        padding: 40px;
+        text-align: center;
+        background: var(--glass);
+        backdrop-filter: var(--blur);
+        -webkit-backdrop-filter: var(--blur);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 24px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        max-width: 400px;
+        width: 90%;
+        color: #fff;
+      }
+
+      h1 {
+        font-size: 32px;
+        margin-bottom: 12px;
+        font-weight: 800;
+        letter-spacing: -1px;
+      }
+
+      p {
+        font-size: 18px;
+        margin-bottom: 24px;
+        color: #cbd5e1;
+        line-height: 1.6;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 14px 32px;
+        border-radius: 12px;
+        background: #38bdf8;
+        color: #0f172a;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+      }
+
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
+        background: #7dd3fc;
+      }
+
+      .btn:active {
+        transform: translateY(-1px);
+      }
     </style>
   </head>
   <body>
-    <div class="wrap">
-      <h1>I've moved !</h1>
-      <p>This page is deprecated. Please visit the new website below.</p>
-      <a class="btn" href="https://abuelgasim.netlify.app/" target="_blank" rel="noopener">Open new site →</a>
-     
+    <div class="card">
+      <h1>الموقع اتغير🧌 </h1>
+      <p>هذه الصفحة لم تعد مستخدمة. يرجى زيارة موقعنا الجديد من خلال الرابط أدناه.</p>
+      <a class="btn" href="https://abuelgasim.netlify.app/" target="_blank" rel="noopener">زيارة الموقع الجديد</a>
     </div>
   </body>
 </html>
