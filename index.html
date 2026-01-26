@@ -3,98 +3,77 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>انتقل الموقع</title>
+    <title>تم نقل الموقع</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
     <style>
-      :root {
-        --glass: rgba(255, 255, 255, 0.15);
-        --blur: blur(15px);
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
       body {
-        margin: 0;
         height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        overflow: hidden;
-      }
-
-      /* Animated liquid background */
-      body::before {
-        content: "";
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        background: #38bdf8;
-        filter: blur(80px);
-        border-radius: 50%;
-        z-index: -1;
-        animation: float 10s infinite alternate;
-      }
-
-      @keyframes float {
-        from { transform: translate(-50%, -50%); }
-        to { transform: translate(50%, 50%); }
+        font-family: 'Vazirmatn', sans-serif;
+        background: #f8f8f8;
+        color: #111;
+        padding: 24px;
       }
 
       .card {
-        padding: 40px;
+        padding: 32px 28px;
         text-align: center;
-        background: var(--glass);
-        backdrop-filter: var(--blur);
-        -webkit-backdrop-filter: var(--blur);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 24px;
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-        max-width: 400px;
-        width: 90%;
-        color: #fff;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 14px;
+        max-width: 420px;
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
       }
 
       h1 {
-        font-size: 32px;
+        font-size: 28px;
         margin-bottom: 12px;
-        font-weight: 800;
-        letter-spacing: -1px;
+        font-weight: 700;
       }
 
       p {
-        font-size: 18px;
+        font-size: 17px;
         margin-bottom: 24px;
-        color: #cbd5e1;
+        color: #444;
         line-height: 1.6;
       }
 
       .btn {
         display: inline-block;
-        padding: 14px 32px;
-        border-radius: 12px;
-        background: #38bdf8;
-        color: #0f172a;
+        padding: 12px 26px;
+        border-radius: 10px;
+        background: #111;
+        color: #fff;
         text-decoration: none;
         font-weight: 700;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+        font-size: 16px;
+        transition: background 0.2s ease, transform 0.2s ease;
       }
 
       .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
-        background: #7dd3fc;
+        background: #333;
+        transform: translateY(-2px);
       }
 
       .btn:active {
-        transform: translateY(-1px);
+        transform: translateY(0);
       }
     </style>
   </head>
   <body>
     <div class="card">
-      <h1>الموقع اتغير🧌 </h1>
-      <p>هذه الصفحة لم تعد مستخدمة. يرجى زيارة موقعنا الجديد من خلال الرابط أدناه.</p>
-      <a class="btn" href="https://abuelgasim.netlify.app/" target="_blank" rel="noopener">زيارة الموقع الجديد</a>
+      <h1>تم نقل الموقع</h1>
+      <p>الصفحة الحالية مجرد إشعار سريع. تقدر تزور النسخة الجديدة مباشرة.</p>
+      <a class="btn" href="https://abuelgasim.netlify.app/" target="_blank" rel="noopener">الانتقال الآن</a>
     </div>
   </body>
 </html>
